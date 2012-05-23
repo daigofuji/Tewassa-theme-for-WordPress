@@ -14,7 +14,7 @@ require_once('library/plugins.php');          // plugins & extra functions (opti
 require_once('library/custom-post-type.php'); // custom post type example
 
 // Admin Functions (commented out by default)
-// require_once('library/admin.php');         // custom admin functions
+require_once('library/admin.php');         // custom admin functions
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 

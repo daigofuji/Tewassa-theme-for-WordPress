@@ -42,11 +42,15 @@
 			
 				<div id="inner-header" class="wrap clearfix">
 				
-					<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
 					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
 					
 					<!-- if you'd like to use the site description you can un-comment it below -->
-					<?php // bloginfo('description'); ?>
+					<p id="header-subtitle"><?php bloginfo('description'); ?></p>
+					
+					<div id="header-search"> 					
+						<?php get_search_form(); ?>
+					</div>
+					
 					
 					<nav role="navigation" class="nav">
 						<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>

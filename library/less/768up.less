@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name: 
-Author: 
+Site Name: Tewassa 2012
+Author: Daigo Fujiwara
 
 Stylesheet: Tablet & Small Desktop Stylesheet
 
@@ -72,8 +72,10 @@ style a page via class
 LAYOUT & GRID STYLES
 *********************/
 
+
 .wrap {
 	max-width: 960px;
+	border: #ccc solid 1px;
 }
 	/***** Grid Options down here, where they are usable ******/
 	/* This is using the 1140 Grid System: http://cssgrid.net/ */
@@ -113,8 +115,9 @@ LAYOUT & GRID STYLES
 HEADER SYTLES
 *********************/
 
-.header {}
-
+.header { }
+#logo { margin: 1em 1em 0; }
+#header-subtitle { margin: 1em 0 0 3em; }
 	#logo {}
 	
 /*********************
@@ -126,7 +129,7 @@ NAVIGATION STYLES
 	/* .menu is clearfixed inside mixins.less */
 	.menu {
 		ul {
-			background: #eee; 
+			background: #eee; border-top: #ccc 1px solid; 
 			
 			li {
 				float: left;
@@ -217,7 +220,7 @@ NAVIGATION STYLES
 POSTS & CONTENT STYLES
 *********************/
 
-#content {}
+#content { }
 	
 		.hentry {
 			header {}

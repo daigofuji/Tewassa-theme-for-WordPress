@@ -1,6 +1,6 @@
 /******************************************************************
 Site Name: Tewassa 2012	
-Author: Daigo
+Author: Daigo Fujiwara
 
 Stylesheet: Mixins & Constants Stylesheet
 
@@ -50,10 +50,18 @@ CLEARFIXIN'
 COLORS
 *********************/
 
-@yellow:            #ebe16f;
-@red:               #fbe3e4;
-@green:             #e6efc2;
-@blue:              #d5edf8;
+@logored:           #ec1c24;
+@red:           	#ec1c24;
+@orange:            #f0781c;
+@dorange:			darken(@orange, 50%);
+@purple:            #6d1ba1;
+@lpurple:           lighten(@purple, 50%);
+@dpurple:			darken(@purple, 50%);
+
+@yellow:			lighten(@orange, 50%);
+@blue:				#430969;
+@green:				#430969;
+
 
 @black:             #000;
 @grayDarker:        lighten(@black, 10%);
@@ -64,7 +72,7 @@ COLORS
 @white:             #fff;
 
 /* this is pulled from Bootstrap */
-@baseColor:         @blue;                  // Set a base color
+@baseColor:         @logored;                  // Set a base color
 @complement:        spin(@baseColor, 180);  // Determine a complementary color
 @split1:            spin(@baseColor, 158);  // Split complements
 @split2:            spin(@baseColor, -158);
@@ -81,9 +89,9 @@ BUTTONS
 *********************/
 
 .button, .button:visited {
-	border: 1px solid darken(@blue, 13%);
-	border-top-color: darken(@blue, 7%);
-	border-left-color: darken(@blue, 7%);
+	border: 1px solid darken(@gray, 13%);
+	border-top-color: darken(@gray, 7%);
+	border-left-color: darken(@gray, 7%);
 	padding: 4px 12px;
 	color: @white;
 	display: inline-block;
@@ -96,18 +104,18 @@ BUTTONS
 	line-height: 21px;
 	.transition();
 	.borderRadius(4px);
-	.css-gradient(@blue,darken(@blue, 5%));
+	.css-gradient(@gray,darken(@gray, 5%));
 
 	&:hover, &:focus {
 		color: @white;
-	  	border: 1px solid darken(@blue, 13%);
-	  	border-top-color: darken(@blue, 20%);
-	 	border-left-color: darken(@blue, 20%);
-		.css-gradient(darken(@blue, 5%),darken(@blue, 10%));
+	  	border: 1px solid darken(@gray, 13%);
+	  	border-top-color: darken(@gray, 20%);
+	 	border-left-color: darken(@gray, 20%);
+		.css-gradient(darken(@gray, 5%),darken(@gray, 10%));
 	}
 	
 	&:active {
-		.css-gradient(darken(@blue, 5%),@blue);
+		.css-gradient(darken(@gray, 5%),@gray);
 	}
 		
 }
@@ -118,7 +126,7 @@ TYPOGRAPHY
 *********************/
 
 .sans-serif { 
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-family: 'Myriad Pro', 'PT Sans', "メイリオ", "Meiryo", sans-serif; 
 }
 .serif { 
 	font-family: "Georgia", Cambria, Times New Roman, Times, serif; 
@@ -170,8 +178,8 @@ ALERTS & NOTICES
 }
 
 .help { 
-	border-color: darken(@yellow, 5%); 
-	background: @yellow; 
+	border-color: darken(@grayLight, 5%); 
+	background: @grayLighter; 
 }
 
 .info { 
