@@ -135,8 +135,12 @@ NAVIGATION STYLES
 				float: left;
 				position: relative;
 				
+				
 				a {
 					border-bottom: 0;
+					font-size: 120%;
+					letter-spacing: -1px; 
+					border-right: #ccc 1px solid; 
 					
 					/*
 					you can use hover styles here even though this size
@@ -145,9 +149,11 @@ NAVIGATION STYLES
 					&:hover, &:focus {
 						background-color: #dedede;
 					
+					
 					}
+					span.sub, br { display:none; height:0; line-height:0; font-size:1px;}
 				}
-				
+				br { display:none;  height:0; line-height:0; font-size:1px;}
 				&:first-child {}
 				&:last-child {}
 				
