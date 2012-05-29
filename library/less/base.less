@@ -29,7 +29,7 @@ IMPORTING STYLES
 GENERAL STYLES
 *********************/
 body {
-  font-family: 'Myriad Pro', 'PT Sans', "メイリオ","Meiryo", sans-serif;
+  font-family: 'PT Sans', "メイリオ","Meiryo", sans-serif, 'Myriad Pro';
   font-size: 16px;
   line-height: 1.5;
   color: #444;
@@ -130,6 +130,7 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 { 
 	font-family: sans-serif; 
 	font-weight: 500; 
+	text-shadow: 0px 1px 0px #fff;
 	/* 
 	if you're going to use webfonts, be sure to check your weights 
 	http://css-tricks.com/watch-your-font-weight/
@@ -159,6 +160,7 @@ h3, .h3 {
 h4, .h4 { 
 	font-size: 1.1em; 
 	font-weight: 700; 
+	color: @dpurple;
 }
 
 h5, .h5 { 
@@ -173,7 +175,8 @@ HEADER SYTLES
 *********************/
 
 .header { margin-top: 1em; }
-
+#head-wrap { overflow:hidden; }
+#head-left { }
 	#logo, #header-subtitle { margin: 1em 0 0; }
 	#logo a { 	text-transform: uppercase;
 				display:block;
@@ -185,8 +188,25 @@ HEADER SYTLES
 				height:49px;
 				border:none;
 			}
+
+	#head-right { }
+		#lang-select {
+			ul {		
+				list-style: none;
+				padding: 0; margin: .5em 0;
+				li { 
+					display: inline;
+					margin:0 1em 0 0;
+					a {
+						&:hover, &:focus {
+						}
+					}
+				}
+			}
+		}
 	#header-search { overflow:hidden;}	
 		#header-search form {float:right;}
+
 
 	
 /*********************
@@ -197,7 +217,7 @@ NAVIGATION STYLES
 
 	/* .menu is clearfixed inside mixins.less */
 	.menu {
-		margin: 1.1em 0 0; 
+		margin: .7em 0 0; 
 	
 		ul {
 			
@@ -209,7 +229,8 @@ NAVIGATION STYLES
 					padding: 7px 12px 4px;
 					background-color: #eee;
 					border-bottom: 1px solid #ccc; 
-					
+					text-shadow: 0px 1px 0px #fff;
+					.transition(all,0.5s);
 					/*
 					remember this is for mobile ONLY, so there's no need
 					to even declare hover styles here, you can do it in
@@ -217,8 +238,10 @@ NAVIGATION STYLES
 					keep this file as small as possible!
 					*/
 					&:hover, &:focus {
-					
+					background-color: @grayLighter
 					}
+					.sub { font-size:80%; font-weight:normal; color:#666; }
+					
 				}
 				
 				&:first-child {}
@@ -859,7 +882,11 @@ FOOTER STYLES
 	
 		ul {
 		
-			li {}
+			li a{					
+					display: block;
+					text-decoration: none;
+					padding: 7px 12px 4px;
+					border-bottom: 1px solid #ccc; }
 		
 		}
 		

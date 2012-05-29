@@ -41,16 +41,24 @@
 			<header role="banner" class="header">
 			
 				<div id="inner-header" class="wrap clearfix">
-				
-					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-					
-					<!-- if you'd like to use the site description you can un-comment it below -->
-					<p id="header-subtitle"><?php bloginfo('description'); ?></p>
-					
-					<div id="header-search"> 					
-						<?php get_search_form(); ?>
-					</div>
-					
+
+					<div id="head-wrap">				
+						<div id="head-left"><!-- logo and slogan -->
+							<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+							<p id="header-subtitle"><?php bloginfo('description'); ?></p>
+						</div> <!-- end #head-left -->
+						<div id="head-right"><!-- language and search -->
+							<div id="lang-select">
+								<ul>
+									<li class="jp">Japanese</li>
+									<li class="en"><a href="/en">English</a></li>
+								</ul>
+							</div>
+							<div id="header-search"> 					
+								<?php get_search_form(); ?>
+							</div>
+						</div>	<!-- end #head-right -->							
+					</div>	<!-- end #head-wrap -->
 					
 					<nav role="navigation" class="nav">
 						<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>

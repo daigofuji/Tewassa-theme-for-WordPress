@@ -118,9 +118,26 @@ HEADER SYTLES
 *********************/
 
 .header { }
-#logo { margin: 1em 1em 0; }
-#header-subtitle { margin: 1em 0 0 3em; }
-	#logo {}
+#head-left {float:left; width: 60%;}
+#logo { margin: .5em .5em 0; }
+#header-subtitle { margin: .5em 0 0 3em; }
+#head-right {float:left; width: 40%;}
+	#lang-select { margin-top:2em;
+		ul {
+			li {
+				a {
+					&:hover, &:focus {
+					}
+				}
+			}
+		}
+	}
+#header-search {
+	float:right;margin-right:2em;
+	input[type="submit"] { font-size:90%; }
+	input[type="text"] {padding:2px 5px 3px;margin-top:3px;}
+	
+	}	
 	
 /*********************
 NAVIGATION STYLES
@@ -149,9 +166,6 @@ NAVIGATION STYLES
 					has the possibility of bieng a mobile device.
 					*/
 					&:hover, &:focus {
-						background-color: #dedede;
-					
-					
 					}
 					span.sub, br { display:none; height:0; line-height:0; font-size:1px;}
 				}
@@ -539,7 +553,7 @@ SIDEBARS & ASIDES
 }
 
 	.widgettitle {
-		border-bottom: 2px solid #444;
+		border-bottom: 1px solid #ccc;
 		margin-bottom: 0.75em;
 	}
 
@@ -665,9 +679,21 @@ FOOTER STYLES
 	*/
 	.footer-links {
 		ul {
+			list-style: none;
+			padding: 0; 
+			margin: 2em 1em .3em;
 			li {
+				display: inline;
+				padding: 0; margin: 0;
+				&:before { content: "| "; }
+				&:first-child:before { content: ""; }
 				a {
-					&:hover {}
+					font-size:85%;
+					color: #666;
+					display: inline;
+					border-bottom:0;
+					padding: 0;
+					&:hover { color: #ec1c24; }
 				}
 				/* 
 				be careful with the depth of your menus.
@@ -679,7 +705,7 @@ FOOTER STYLES
 		}
 	} /* end .footer-links */
 			
-	.attribution {}
+	.attribution { margin: 0 2em 2em; float:right; }
 		
 
 } /* end of the function (DO NOT DELETE) */
