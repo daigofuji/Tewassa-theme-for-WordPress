@@ -9,7 +9,7 @@ The comments page for Bones
 
   if ( post_password_required() ) { ?>
   	<div class="help">
-    	<p class="nocomments">This post is password protected. Enter the password to view comments.</p>
+    	<p class="nocomments">コメントを見るにはログインする必要があります。</p>
   	</div>
   <?php
     return;
@@ -20,7 +20,7 @@ The comments page for Bones
 
 <?php if ( have_comments() ) : ?>
 	
-	<h3 id="comments" class="h2"><?php comments_number('<span>No</span> Responses', '<span>One</span> Response', '<span>%</span> Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
+	<h3 id="comments" class="h2">&#8220;<?php the_title(); ?>&#8221;のポストに<?php comments_number('コメントはありません。', 'コメントが<span>1</span>件あります。', 'コメントが<span>%</span>件あります。' );?></h3>
 
 	<nav id="comment-nav">
 		<ul class="clearfix">
@@ -47,7 +47,7 @@ The comments page for Bones
 
 	<?php else : // comments are closed ?>
 	<!-- If comments are closed. -->
-	<p class="nocomments">Comments are closed.</p>
+	<p class="nocomments"></p>
 
 	<?php endif; ?>
 
@@ -58,7 +58,7 @@ The comments page for Bones
 
 <section id="respond" class="respond-form">
 
-	<h3 id="comment-form-title" class="h2"><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h3>
+	<h3 id="comment-form-title" class="h2"><?php comment_form_title( 'コメントする', '%さんに返信する' ); ?></h3>
 
 	<div id="cancel-comment-reply">
 		<p class="small"><?php cancel_comment_reply_link(); ?></p>
@@ -66,7 +66,7 @@ The comments page for Bones
 
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
   	<div class="help">
-  		<p>You must be <a href="<?php echo wp_login_url( get_permalink() ); ?>">logged in</a> to post a comment.</p>
+  		<p>コメントするには<a href="<?php echo wp_login_url( get_permalink() ); ?>">ログイン</a>する必要があります。</p>
   	</div>
 	<?php else : ?>
 
@@ -74,7 +74,7 @@ The comments page for Bones
 
 	<?php if ( is_user_logged_in() ) : ?>
 
-	<p class="comments-logged-in-as">Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a></p>
+	<p class="comments-logged-in-as"><a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>としてログインしています。 <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">ログアウト &raquo;</a></p>
 
 	<?php else : ?>
 	
@@ -103,12 +103,12 @@ The comments page for Bones
 	<p><textarea name="comment" id="comment" placeholder="Your Comment Here..." tabindex="4"></textarea></p>
 	
 	<p>
-	  <input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+	  <input name="submit" type="submit" id="submit" tabindex="5" value="コメント送信" />
 	  <?php comment_id_fields(); ?>
 	</p>
 	
 	<div class="help">
-		<p id="allowed_tags" class="small"><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></p>
+		<p id="allowed_tags" class="small"><strong>XHTML</strong> の以下のタグが使用できます: <code><?php echo allowed_tags(); ?></code></p>
 	</div>
 	
 	<?php do_action('comment_form', $post->ID); ?>

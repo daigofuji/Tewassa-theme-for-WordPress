@@ -8,27 +8,28 @@
 					
 						<?php if (is_category()) { ?>
 							<h1 class="archive_title h2">
-								<span><?php _e("Posts Categorized:", "bonestheme"); ?></span> <?php single_cat_title(); ?>
+								<span>「</span><?php single_cat_title(); ?><span>」カテゴリーの投稿</span> 
 							</h1>
 						<?php } elseif (is_tag()) { ?> 
 							<h1 class="archive_title h2">
-								<span><?php _e("Posts Tagged:", "bonestheme"); ?></span> <?php single_tag_title(); ?>
+								<span>「</span> <?php single_tag_title(); ?><span>」のタグのついた投稿</span>
 							</h1>
 						<?php } elseif (is_author()) { ?>
 							<h1 class="archive_title h2">
-								<span><?php _e("Posts By:", "bonestheme"); ?></span> <?php get_the_author_meta('display_name'); ?>
+								<span>
+								「</span> <?php get_the_author_meta('display_name'); ?><span>」さんによる投稿</span>
 							</h1>
 						<?php } elseif (is_day()) { ?>
 							<h1 class="archive_title h2">
-								<span><?php _e("Daily Archives:", "bonestheme"); ?></span> <?php the_time('l, F j, Y'); ?>
+								 <?php the_time('Y年 F j日 l'); ?><span>のアーカイブ</span>
 							</h1>
 						<?php } elseif (is_month()) { ?>
 						    <h1 class="archive_title h2">
-						    	<span><?php _e("Monthly Archives:", "bonestheme"); ?>:</span> <?php the_time('F Y'); ?>
+						    	<span></span> <?php the_time('Y年 F '); ?><span>のアーカイブ</span>
 						    </h1>
 						<?php } elseif (is_year()) { ?>
 						    <h1 class="archive_title h2">
-						    	<span><?php _e("Yearly Archives:", "bonestheme"); ?>:</span> <?php the_time('Y'); ?>
+						    	<span></span> <?php the_time('Y年'); ?><span>のアーカイブ</span>
 						    </h1>
 						<?php } ?>
 					
@@ -40,7 +41,7 @@
 								
 								<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 								
-								<p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php the_category(', '); ?>.</p>
+								<p class="meta">投稿： <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('Y年 F j日'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> カテゴリー：<?php the_category(', '); ?>.</p>
 							
 							</header> <!-- end article header -->
 						
@@ -67,8 +68,8 @@
 						<?php } else { // if it is disabled, display regular wp prev & next links ?>
 							<nav class="wp-prev-next">
 								<ul class="clearfix">
-									<li class="next-link"><?php next_posts_link(__('&laquo; Older Entries', "bonestheme")) ?></li>
-									<li class="prev-link"><?php previous_posts_link(__('Newer Entries &raquo;', "bonestheme")) ?></li>
+									<li class="next-link"><?php next_posts_link(__('&laquo; 古めの投稿', "bonestheme")) ?></li>
+									<li class="prev-link"><?php previous_posts_link(__('新しめの投稿 &raquo;', "bonestheme")) ?></li>
 								</ul>
 							</nav>
 						<?php } ?>
@@ -78,10 +79,10 @@
 						
 						<article id="post-not-found">
 						    <header>
-						    	<h1><?php _e("No Posts Yet", "bonestheme"); ?></h1>
+						    	<h1>投稿がまだ無いようです。</h1>
 						    </header>
 						    <section class="post-content">
-						    	<p><?php _e("Sorry, What you were looking for is not here.", "bonestheme"); ?></p>
+						    	<p>投稿が見つかりませんでした。</p>
 						    </section>
 						    <footer>
 						    </footer>

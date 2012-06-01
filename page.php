@@ -14,7 +14,7 @@
 							
 							<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 							
-							<p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?>.</p>
+							
 						
 						</header> <!-- end article header -->
 					
@@ -24,8 +24,8 @@
 						</section> <!-- end article section -->
 						
 						<footer>
-			
-							<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
+					<!-- <p class="meta">制作： <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('Y年 F j日'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?>.</p> -->
+							<?php the_tags('<p class="tags"><span class="tags-title">タグ:</span> ', ', ', '</p>'); ?>
 							
 						</footer> <!-- end article footer -->
 						
@@ -40,10 +40,10 @@
 						
 						<article id="post-not-found">
 						    <header>
-						    	<h1>Not Found</h1>
+						    	<h1>見つかりませんでした</h1>
 						    </header>
 						    <section class="post-content">
-						    	<p>Sorry, but the requested resource was not found on this site.</p>
+						    	<p>お探しのファイルが見つかりませんでした。</p>
 						    </section>
 						    <footer>
 						    </footer>

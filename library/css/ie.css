@@ -322,53 +322,66 @@ LAYOUT & GRID STYLES
 /***** Grid Options down here, where they are usable ******/
 /* This is using the 1140 Grid System: http://cssgrid.net/ */
 .onecol {
-  width: 4.85%;
+  width: 3.85%;
 }
 /* grid_1  */
 .twocol {
-  width: 13.45%;
+  width: 12.45%;
 }
 /* grid_2  */
 .threecol {
-  width: 22.05%;
+  width: 21.05%;
 }
 /* grid_3  */
 .fourcol {
-  width: 30.75%;
+  width: 29.75%;
 }
 /* grid_4  */
 .fivecol {
-  width: 39.45%;
+  width: 38.45%;
 }
 /* grid_5  */
 .sixcol {
-  width: 48%;
+  width: 47%;
 }
 /* grid_6  */
 .sevencol {
-  width: 56.75%;
+  width: 55.75%;
 }
 /* grid_7  */
 .eightcol {
-  width: 65.4%;
+  width: 64.4%;
 }
 /* grid_8  */
 .ninecol {
-  width: 74.05%;
+  width: 73.05%;
 }
 /* grid_9  */
 .tencol {
-  width: 82.7%;
+  width: 81.7%;
 }
 /* grid_10 */
 .elevencol {
-  width: 91.35%;
+  width: 90.35%;
 }
 /* grid_11 */
 .twelvecol {
-  width: 100%;
+  width: 99%;
 }
 /* grid_12 */
+/* ORIGINAL
+	.onecol    { width: 4.85%;  } 
+	.twocol    { width: 13.45%; } 
+	.threecol  { width: 22.05%; }
+	.fourcol   { width: 30.75%; } 
+	.fivecol   { width: 39.45%; } 
+	.sixcol    { width: 48%;    } 
+	.sevencol  { width: 56.75%; }
+	.eightcol  { width: 65.4%;  }
+	.ninecol   { width: 74.05%; } 
+	.tencol    { width: 82.7%;  }
+	.elevencol { width: 91.35%; } 
+	.twelvecol { width: 100%;   } */
 /* layout & column defaults */
 .onecol,
 .twocol,
@@ -518,6 +531,9 @@ NAVIGATION STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+#main {
+  padding-left: 2%;
+}
 /* end .hentry */
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
@@ -658,6 +674,11 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
+.footer-about {
+  margin: 2em 1em .3em;
+  font-size: 85%;
+  color: #444;
+}
 /*
 	you'll probably need to do quite a bit
 	of overriding here if you styled them for
@@ -666,7 +687,7 @@ FOOTER STYLES
 .footer-links ul {
   list-style: none;
   padding: 0;
-  margin: 2em 1em .3em;
+  margin: .3em 1em .3em;
 }
 .footer-links ul li {
   display: inline;

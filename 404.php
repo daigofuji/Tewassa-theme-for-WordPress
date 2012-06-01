@@ -10,13 +10,13 @@
 							
 							<header>
 								
-								<h1>Epic 404 - Article Not Found</h1>
+								<h1>エラー４０４。ページがみつかりません。</h1>
 							
 							</header> <!-- end article header -->
 						
 							<section class="post-content">
 								
-								<p>The article you were looking for was not found, but maybe try looking again!</p>
+								<p>お探しのページが見つからないようです。</p>
 						
 							</section> <!-- end article section -->
 							

@@ -6,7 +6,7 @@
 			
 					<div id="main" class="ninecol clearfix" role="main">
 					
-						<h1 class="archive_title"><span>Search Results for:</span> <?php echo esc_attr(get_search_query()); ?></h1>
+						<h1 class="archive_title"><span>「</span> <?php echo esc_attr(get_search_query()); ?><span>」の検索結果</span></h1>
 					
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 						
@@ -16,12 +16,12 @@
 								
 								<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 								
-								<p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php the_category(', '); ?>.</p>
+								<p class="meta">投稿： <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('Y年 F j日'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> カテゴリー <?php the_category(', '); ?>.</p>
 							
 							</header> <!-- end article header -->
 						
 							<section class="post-content">
-								<?php the_excerpt('<span class="read-more">Read more on "'.the_title('', '', false).'" &raquo;</span>'); ?>
+								<?php the_excerpt('<span class="read-more">続きを読む "'.the_title('', '', false).'" &raquo;</span>'); ?>
 						
 							</section> <!-- end article section -->
 							
@@ -41,8 +41,8 @@
 						<?php } else { // if it is disabled, display regular wp prev & next links ?>
 							<nav class="wp-prev-next">
 								<ul class="clearfix">
-									<li class="next-link"><?php next_posts_link(__('&laquo; Older Entries', "bonestheme")) ?></li>
-									<li class="prev-link"><?php previous_posts_link(__('Newer Entries &raquo;', "bonestheme")) ?></li>
+									<li class="next-link"><?php next_posts_link(__('&laquo; 前のポスト', "bonestheme")) ?></li>
+									<li class="prev-link"><?php previous_posts_link(__('次のポスト &raquo;', "bonestheme")) ?></li>
 								</ul>
 							</nav>
 						<?php } ?>			
@@ -53,10 +53,10 @@
 						
 						<article id="post-not-found">
 						    <header>
-						    	<h1>No Results Found</h1>
+						    	<h2>0件</h2>
 						    </header>
 						    <section class="post-content">
-						    	<p>Sorry, but the requested resource was not found on this site.</p>
+						    	<p>お探しのファイル・ポストは見つからないようです。もう一度検索の内容を変えて試してみてください。</p>
 						    </section>
 						    <footer>
 						    </footer>
@@ -64,11 +64,13 @@
 						
 						<?php endif; ?>
 					
+					<?php get_search_form(); ?>
+					
 					</div> <!-- end #main -->
     				
     				<div id="sidebar1" class="sidebar twocol last">
     					
-    					<?php get_search_form(); ?>
+    					
     				
     				</div>
     				

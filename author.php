@@ -7,7 +7,7 @@
 					<div id="main" class="eightcol clearfix" role="main">
 					
 						<h1 class="archive_title h2">
-							<span><?php _e("Posts By:", "bonestheme"); ?></span> 
+							<span>ユーザー「</span> 
 							<!-- google+ rel=me function -->
 							<?php $curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('author_name')) : get_userdata(get_query_var('author'));
 							$google_profile = get_the_author_meta( 'google_profile', $curauth->ID );
@@ -16,6 +16,7 @@
 							<?php } else { ?>
 							<?php echo get_the_author_meta('display_name'); ?>
 							<?php } ?>
+							<span>」さんによる投稿</span> 
 						</h1>
 						
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -26,7 +27,7 @@
 								
 								<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 								
-								<p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php the_category(', '); ?>.</p>
+								<p class="meta">投稿： <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('Y年 F j日'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> カテゴリー：<?php the_category(', '); ?>.</p>
 							
 							</header> <!-- end article header -->
 						
@@ -64,10 +65,10 @@
 						
 						<article id="post-not-found">
 						    <header>
-						    	<h1><?php _e("No Posts Yet", "bonestheme"); ?></h1>
+						    	<h1>まだ投稿がないようです。</h1>
 						    </header>
 						    <section class="post-content">
-						    	<p><?php _e("Sorry, What you were looking for is not here.", "bonestheme"); ?></p>
+						    	<p>投稿が見つかりませんでした。</p>
 						    </section>
 						    <footer>
 						    </footer>
