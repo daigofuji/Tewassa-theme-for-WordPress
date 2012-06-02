@@ -527,6 +527,12 @@ NAVIGATION STYLES
   top: auto;
   display: block;
 }
+.menu ul li.current-menu-item a,
+.menu ul li.current_page_item a,
+.menu ul li.current-page-ancestor a {
+  background-color: #ec1c24;
+  color: #fff;
+}
 /* end .menu */
 /*********************
 POSTS & CONTENT STYLES

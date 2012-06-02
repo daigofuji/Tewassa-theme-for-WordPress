@@ -8,8 +8,9 @@
 					
 						<?php if (is_category()) { ?>
 							<h1 class="archive_title h2">
-								<span>「</span><?php single_cat_title(); ?><span>」カテゴリーの投稿</span> 
+								<?php single_cat_title(); ?>
 							</h1>
+							<h3><?php echo category_description(); ?></h3>
 						<?php } elseif (is_tag()) { ?> 
 							<h1 class="archive_title h2">
 								<span>「</span> <?php single_tag_title(); ?><span>」のタグのついた投稿</span>
