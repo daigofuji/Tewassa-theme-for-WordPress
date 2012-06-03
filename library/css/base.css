@@ -814,6 +814,8 @@ HEADER SYTLES
 #logo,
 #header-subtitle {
   margin: 1em 0 0;
+  font-weight: bold;
+  color: #888;
 }
 #logo a {
   text-transform: uppercase;

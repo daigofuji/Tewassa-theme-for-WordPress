@@ -25,7 +25,7 @@
 						</section> <!-- end article section -->
 						
 						<footer>
-							<p class="meta">投稿： <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('Y年 F j日'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> カテゴリー <?php the_category(', '); ?>.</p>
+							<p class="meta">投稿： <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('Y年 F j日'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> カテゴリー <?php the_category(', '); ?>. <?php edit_post_link(); ?></p>
 							
 							<?php the_tags('<p class="tags"><span class="tags-title">タグ:</span> ', ', ', '</p>'); ?>
 							
