@@ -18,9 +18,9 @@ Template Name: Home page
 							
 							<header>
 								
-								<h1 id="welcome"><?php the_title(); ?></h1>
-								
-								<!-- <p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?>.</p> -->
+								<h1 id="welcome"><?php //the_title(); ?></h1>
+								<!--
+								<p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?>.</p> -->
 							
 							</header> <!-- end article header -->
 						
