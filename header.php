@@ -50,8 +50,8 @@
 						<div id="head-right"><!-- language and search -->
 							<div id="lang-select">
 								<ul>
-									<li><a href="/en" class="en">English</a></li>
-									<li><a href="<?php echo home_url(); ?>" class="jp">Japanese</a></li>
+									<li><a href="/?lang=en" class="en">English</a></li>
+									<li><a href="/?lang=ja" class="jp">Japanese</a></li>
 								</ul>
 							</div>
 							<div id="header-search"> 					
