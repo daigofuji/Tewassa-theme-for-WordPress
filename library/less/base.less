@@ -174,8 +174,8 @@ h5, .h5 {
 HEADER SYTLES
 *********************/
 
-.header { margin-top: 1em; }
-#head-wrap { overflow:hidden; }
+.header { margin-top: 1em;  }
+#head-wrap { overflow:hidden; background:#F0F0F0; padding-bottom:0.7em; }
 #head-left { }
 	#logo, #header-subtitle { margin: 1em 0 0; font-weight:bold; color: #888;}
 	#logo a { 	text-transform: uppercase;
@@ -234,18 +234,16 @@ NAVIGATION STYLES
 
 	/* .menu is clearfixed inside mixins.less */
 	.menu {
-		margin: .7em 0 0; 
-	
+		margin: 0 0 0; 
+
 		ul {
-			
 			li {
-			
+				float: left;
 				a {
 					display: block;
 					text-decoration: none;
-					padding: 7px 12px 4px;
-					background-color: #eee;
-					border-bottom: 1px solid #ccc; 
+					padding: 3px 6px 2px;
+					background-color: #F0F0F0;
 					text-shadow: 0px 1px 0px #fff;
 					.transition(all,0.5s);
 					/*
@@ -274,12 +272,10 @@ NAVIGATION STYLES
 				*/
 				ul.sub-menu,
 				ul.children {
-					
+					display:none;
 					li {
 						
-						a {
-							padding-left: 30px;
-							
+						a {							
 							&:hover,
 							&:focus {}
 							
@@ -899,7 +895,7 @@ SIDEBARS & ASIDES
 			}
 		
 		}
-	
+	 a.timesince {fon-size:80%; color:#999;}
 	}
 
 /*********************
