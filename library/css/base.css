@@ -776,7 +776,7 @@ h5 a,
 }
 h1,
 .h1 {
-  font-size: 2.5em;
+  font-size: 2.3em;
   line-height: 1.333em;
 }
 h2,
@@ -1014,6 +1014,7 @@ POSTS & CONTENT STYLES
 /* gallery caption styles */.welcome {
   text-align: center;
   font-size: 120%;
+  line-height: 1.65;
   color: #444;
 }
 .welcome span {
@@ -1309,7 +1310,7 @@ SIDEBARS & ASIDES
   text-decoration: underline;
 }
 .widget a.timesince {
-  fon-size: 80%;
+  font-size: 80%;
   color: #999;
 }
 /*********************
