@@ -806,7 +806,7 @@ h5,
 HEADER SYTLES
 *********************/
 .header {
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 #head-wrap {
   overflow: hidden;
@@ -1280,6 +1280,9 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+.latestblog {
+  overflow: hidden;
+}
 .latestblog h3 {
   margin: 0 0 .5em;
   font-weight: bold;
@@ -1287,8 +1290,12 @@ SIDEBARS & ASIDES
 .latestblog h3 a {
   color: #444;
 }
+.latestblog img {
+  float: left;
+  margin: 0 5px 5px 0;
+}
 .latestblog p {
-  margin: 0 0 .5em;
+  margin: 0 0.5em 0.5em;
 }
 .widget ul li {
   /* deep nesting */
