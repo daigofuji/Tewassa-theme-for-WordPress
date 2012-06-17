@@ -1280,6 +1280,16 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+.latestblog h3 {
+  margin: 0 0 .5em;
+  font-weight: bold;
+}
+.latestblog h3 a {
+  color: #444;
+}
+.latestblog p {
+  margin: 0 0 .5em;
+}
 .widget ul li {
   /* deep nesting */
 
