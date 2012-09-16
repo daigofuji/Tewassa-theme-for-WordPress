@@ -174,13 +174,12 @@ h5, .h5 {
 HEADER SYTLES
 *********************/
 
-.header { margin-top: 0.5em;  }
-#head-wrap { overflow:hidden; background:#F0F0F0; padding-bottom:0.7em; }
-#head-left { }
-	#logo, #header-subtitle { margin: 1em 0 0; font-weight:bold; color: #888;}
+#head-wrap { overflow:hidden; }
+#head-left { 
+	#logo, #header-subtitle { margin:0; font-weight:bold; color: #888;}
 	#logo a { 	text-transform: uppercase;
 				display:block;
-				text-indent: 100%;
+				text-indent: 150%;
 				white-space: nowrap;
 				overflow: hidden;
 				background: transparent url(../images/login-logo.png) no-repeat left top;
@@ -188,18 +187,15 @@ HEADER SYTLES
 				height:49px;
 				border:none;
 			}
-
-	#head-right { }
+}
+#head-right { 
 		#lang-select {
 			ul {		
-				overflow:hidden;
 				list-style: none;
-				padding: 0; 
-				margin: .5em 1em 1em 0;
+				padding: 0; margin:0;
 				li { 
-					float:right;
-					
-					margin:0 1em 0 0;
+					display:inline;
+					padding:0;
 					a {
 						width:60px;
 						padding-left:22px;
@@ -221,6 +217,14 @@ HEADER SYTLES
 				}
 			}
 		}
+		#header-search {
+			display:block;
+			font-size: 80%;
+			input[type="text"] {
+				width:100px;
+			} 
+		}
+}
 	#header-search { overflow:hidden;}	
 		#header-search form {float:right;}
 
@@ -234,10 +238,11 @@ NAVIGATION STYLES
 
 	/* .menu is clearfixed inside mixins.less */
 	.menu {
-		margin: 0 0 0; 
+		margin: 0; 
 
 		ul {
 			li {
+				margin:0 0.5em 0 0;
 				float: left;
 				a {
 					display: block;

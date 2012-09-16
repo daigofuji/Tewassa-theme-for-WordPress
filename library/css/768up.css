@@ -1,0 +1,8 @@
+/* 
+wrapping styles in a function so we can call it
+inside of media queries. We also do this so we can
+call this function in the ie.less file. Which means
+IE will get all the styles without any hefty work.
+*/
+
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

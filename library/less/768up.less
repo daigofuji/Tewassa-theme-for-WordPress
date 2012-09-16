@@ -130,28 +130,40 @@ LAYOUT & GRID STYLES
 /*********************
 HEADER SYTLES
 *********************/
-
-.header { }
-#head-left {float:left; width: 60%;}
-#logo { margin: .5em .5em 0; }
-#header-subtitle { margin: .5em 0 0 1.5em; letter-spacing:3px;  }
-#head-right {float:left; width: 40%;}
-	#lang-select { margin-top:2em;
-		ul {
-			li {
-				a {
-					&:hover, &:focus {
+.header { 
+	margin-top: 0.5em;  
+	#head-wrap { 
+		background:#F0F0F0; 
+		padding-bottom:0.7em; 
+		#logo { 
+			margin: .5em 0 0 .5em; 
+		}
+		#header-subtitle { 
+			margin: .5em 0 0 1.5em; 
+			letter-spacing:3px;  
+		}
+	}		
+	#head-right { 
+		#lang-select { 
+			margin-top:2em;
+			ul {
+				margin: .5em 1em 1em 0;
+				li {
+					margin:0 1em 0 0;
+					a {
+						&:hover, &:focus {
+						}
 					}
 				}
 			}
 		}
+		#header-search {
+			float:right;margin-right:2em;
+			input[type="submit"] { font-size:90%; }
+			input[type="text"] {padding:2px 5px 3px;margin-top:3px;width:130px;}
+		}	
 	}
-#header-search {
-	float:right;margin-right:2em;
-	input[type="submit"] { font-size:90%; }
-	input[type="text"] {padding:2px 5px 3px;margin-top:3px;}
-	
-	}	
+}
 	
 /*********************
 NAVIGATION STYLES
@@ -163,12 +175,11 @@ NAVIGATION STYLES
 	.menu {
 		ul {
 			background: #eee; border-top: #ccc 1px solid; 
-			
+			margin: 0;
 			li {
 				float: left;
 				position: relative;
-				
-				
+				margin: 0;
 				a {
 					padding: 7px 12px 4px;
 					border-bottom: 0;
