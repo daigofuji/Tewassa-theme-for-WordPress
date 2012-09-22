@@ -100,20 +100,33 @@ NAVIGATION STYLES
 *********************/
 
 .nav {}
-
+	#mobilenav { 
+		display:none;	
+	}
 	/* .menu is clearfixed inside mixins.less */
 	.menu {
 		ul {
+			display:block;
 			li {
+				margin:0 0.5em 0 0;
+				float: left;
 				a {
+					display: block;
+					text-decoration: none;
+					padding: 3px 6px 2px;
+					background-color: #F0F0F0;
+					text-shadow: 0px 1px 0px #fff;
 					
 					/*
-					you can use hover styles here even though this size
-					has the possibility of bieng a mobile device.
+					remember this is for mobile ONLY, so there's no need
+					to even declare hover styles here, you can do it in
+					the style.less file where it's relevant. We want to 
+					keep this file as small as possible!
 					*/
 					&:hover, &:focus {
-					
 					}
+					.sub { font-size:80%; font-weight:normal; color:#666; }
+					
 				}
 				
 				&:first-child {}

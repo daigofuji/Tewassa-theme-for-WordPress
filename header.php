@@ -61,6 +61,7 @@
 					</div>	<!-- end #head-wrap -->
 					
 					<nav role="navigation" class="nav">
+						<div id="mobilenav"><a href="#menu-footer" class="mobilenav">↓サイトマップへ</a></div>
 						<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
 					</nav>
 				
